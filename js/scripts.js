@@ -62,8 +62,8 @@ function closeCartaModal() {
 }
 
 function downloadCarta() {
-  const filePath = 'img/carta-un-toque-callego.jpg';
-  const fileName = 'carta-un-toque-callego.jpg';
+  const filePath = 'img/carta-un-toque-gallego.jpg';
+  const fileName = 'carta-un-toque-gallego.jpg';
   const link = document.createElement('a');
   link.href = filePath;
   link.download = fileName;
