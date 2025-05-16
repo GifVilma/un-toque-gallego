@@ -461,7 +461,6 @@ ul li:last-child {
     border: none; /* Elimina cualquier borde debajo */
 }
 
-
 /* ========================================================================= */
 /* BENTO GRID - DESAYUNOS Y MERIENDAS */
 
@@ -474,10 +473,10 @@ ul li:last-child {
     max-width: 1200px;
     margin: 0 auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Caja individual */
-  .bento-box {
+}
+
+/* Caja individual */
+.bento-box {
     background: #fff;
     padding: 20px;
     display: grid;
@@ -485,24 +484,24 @@ ul li:last-child {
     grid-template-rows: auto auto auto; /* Filas para h2, p, y contenido */
     gap: 15px;
     align-items: start;
-  }
-  
-  /* Títulos principales */
-  .bento-box h2 {
+}
+
+/* Títulos principales */
+.bento-box h2 {
     font-size: 1.2rem;
-    color: var(--color-cuaternario, #333);
+    color: var(--color-cuaternario);
     text-align: center;
     grid-column: 1 / -1; /* Ocupa ambas columnas */
     grid-row: 1 / 2; /* Primera fila */
     margin: 0 0 15px;
     width: 100%;
     padding: 0;
-  }
-  
-  /* Descripción */
-  .bento-box p {
-    font-family: var(--font-descripcion, sans-serif);
-    color: var(--color-cuaternario, #333);
+}
+
+/* Descripción */
+.bento-box p {
+    font-family: var(--font-descripcion);
+    color: var(--color-cuaternario);
     font-size: 1.2rem;
     text-align: center;
     line-height: 1.5;
@@ -511,10 +510,10 @@ ul li:last-child {
     grid-row: 2 / 3; /* Segunda fila */
     max-width: 90%;
     width: 100%;
-  }
-  
-  /* Imágenes */
-  .desa-img {
+}
+
+/* Imágenes */
+.desa-img {
     width: 100%;
     max-width: 675px;
     height: auto;
@@ -525,167 +524,234 @@ ul li:last-child {
     grid-column: 1 / 2; /* Primera columna */
     grid-row: 3 / 4; /* Tercera fila */
     align-self: center;
-  }
-  
-  /* Contenedor de contenido (tablas) */
-  .content {
+}
+
+/* Contenedor de contenido (tablas) */
+.content {
     grid-column: 2 / 3; /* Segunda columna */
     grid-row: 3 / 4; /* Tercera fila */
     width: 100%;
-  }
-  
-  /* Contenedor de tablas para #desayunos y #tostas */
-  .bento-table {
+}
+
+/* Contenedor de tablas para #desayunos y #tostas */
+.bento-table {
     display: grid;
     gap: 8px;
     margin-bottom: 20px;
-  }
-  
-  /* Subtítulos en tablas */
-  .bento-table h3 {
+}
+
+/* Subtítulos en tablas */
+.bento-table h3 {
     font-size: 1.2rem;
-    color: var(--color-cuaternario, #333);
+    color: var(--color-cuaternario);
     text-align: center;
     margin: 15px 0 10px;
-  }
-  
-  /* Filas de dos columnas (#desayunos y #tostas) */
-  .table-row {
+}
+
+/* Filas de dos columnas (#desayunos y #tostas) */
+.table-row {
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 8px 0;
     border-bottom: 1px solid #eee;
-  }
-  
-  .table-row:last-child {
+}
+
+.table-row:last-child {
     border-bottom: none;
-  }
-  
-  .table-row span {
+}
+
+.table-row span {
     display: flex;
     align-items: center;
-  }
-  
-  .table-row span:nth-child(1) {
+}
+
+.table-row span:nth-child(1) {
     text-align: left;
     justify-content: flex-start;
     gap: 5px;
     font-size: 1.2rem;
-  }
-  
-  .table-row span:nth-child(1) a {
-    display: flex;
-    gap: 4px;
-    text-decoration: none;
-    color: var(--color-cuaternario, #333);
-  }
-  
-  .table-row span:nth-child(1) a:hover {
-    text-decoration: underline;
-  }
-  
-  .table-row span:nth-child(2) {
+    color: var(--color-cuaternario);
+}
+
+.table-row span:nth-child(2) {
     text-align: right;
     justify-content: flex-end;
     font-size: 1.2rem;
-    color: var(--color-cuaternario, #333);
+    color: var(--color-cuaternario);
     padding-right: 30px;
-  }
-  
-  /* Contenedor de tablas para #bocadillos */
-  .bocadillos-table {
+}
+
+/* Contenedor de tablas para #bocadillos */
+.bocadillos-table {
     display: grid;
     gap: 8px;
     margin-bottom: 20px;
-  }
-  
-  /* Filas de tres columnas (#bocadillos) */
-  .bocadillos-row {
+}
+/* Estilo para el contenedor de detalles del plato (también para #desayunos y #tostas) */
+.table-row span.item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Estilo para los alérgenos en #desayunos y #tostas */
+.table-row .allergens {
+    display: flex;
+    gap: 6px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* Emoji visualmente igual que en carta */
+.table-row .emoji {
+    font-size: 0.8rem;
+    display: inline-flex;
+    line-height: 1;
+}
+
+/* Filas de tres columnas (#bocadillos) */
+.bocadillos-row {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     padding: 8px 0;
     border-bottom: 1px solid #eee;
-  }
-  
-  .bocadillos-row:last-child {
+    align-items: start;
+}
+
+.bocadillos-row:last-child {
     border-bottom: none;
-  }
-  
-  .bocadillos-row span {
+}
+
+.bocadillos-row span {
     display: flex;
-    align-items: center;
-  }
-  
-  .bocadillos-row span:nth-child(1) {
+    align-items: start;
+}
+
+.bocadillos-row span:nth-child(1) {
     text-align: left;
     justify-content: flex-start;
-    gap: 5px;
     font-size: 1.2rem;
-  }
-  
-  .bocadillos-row span:nth-child(1) a {
-    display: flex;
-    gap: 4px;
-    text-decoration: none;
-    color: var(--color-cuaternario, #333);
-  }
-  
-  .bocadillos-row span:nth-child(1) a:hover {
-    text-decoration: underline;
-  }
-  
-  .bocadillos-row span:nth-child(2),
-  .bocadillos-row span:nth-child(3) {
+}
+
+.bocadillos-row span:nth-child(2),
+.bocadillos-row span:nth-child(3) {
     text-align: center;
     justify-content: center;
     font-size: 1.2rem;
-    color: var(--color-cuaternario, #333);
-  }
-  
-  /* Encabezado de #bocadillos */
-  .bocadillos-header-row {
+    color: var(--color-cuaternario);
+}
+
+/* Encabezado de #bocadillos */
+.bocadillos-header-row {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     padding: 8px 0;
     border-bottom: 1px solid #eee;
     text-align: center;
     font-weight: bold;
-    color: var(--color-cuaternario, #333);
-  }
-  
-  .bocadillos-header-row span:nth-child(1) {
+    color: var(--color-cuaternario);
+}
+
+.bocadillos-header-row span:nth-child(1) {
     text-align: left;
-  }
-  
-  .bocadillos-header-row span:nth-child(2),
-  .bocadillos-header-row span:nth-child(3) {
+}
+
+.bocadillos-header-row span:nth-child(2),
+.bocadillos-header-row span:nth-child(3) {
     text-align: center;
-  }
-  
-  .bocadillos-header-row img {
+}
+
+.bocadillos-header-row img {
     display: block;
     margin: auto;
     max-height: 70px;
-  }
-  
-  /* Estilo de los emojis */
-  .emoji {
-    font-size: 13px;
+}
+
+/* Estilo para el contenedor de detalles del plato (solo #bocadillos) */
+.item-details {
+    display: flex;
+    flex-direction: column; /* Apila el nombre y los alérgenos verticalmente */
+    gap: 4px; /* Espacio entre el nombre y los alérgenos */
+    text-align: left !important; /* Forzar alineación a la izquierda */
+    justify-content: flex-start;
+}
+
+/* Estilo para el nombre del plato (solo #bocadillos) */
+.item-name {
+    font-size: 1.2rem;
+    color: var(--color-cuaternario);
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Estilo para los alérgenos (solo #bocadillos) */
+.allergens {
+    display: flex;
+    gap: 6px; /* Espacio entre emojis */
+    font-size: 0.8rem;
+    opacity: 0.8;
+    text-align: left !important; /* Forzar alineación a la izquierda */
+}
+
+/* Estilo para los emojis */
+.emoji {
+    font-size: 0.8rem; /* Tamaño ajustado para emojis */
     display: inline-flex;
-    gap: 2px;
-  }
-  
-  /* Posicionamiento de las secciones */
-  #desayunos,
-  #tostas,
-  #bocadillos {
+    line-height: 1;
+}
+
+/* Posicionamiento de las secciones */
+#desayunos,
+#tostas,
+#bocadillos {
     grid-column: span 2; /* Cada sección ocupa todo el ancho */
-  }
-  
+}
 
-/*===============================
+/* Responsividad */
+@media (max-width: 768px) {
+    .desayunos-meriendas {
+        padding: 10px;
+    }
+    .bento-box {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        grid-template-rows: auto auto auto auto;
+    }
+    .desa-img {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+    .content {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+    }
+    .table-row span:nth-child(1),
+    .item-name {
+        font-size: 1rem; /* Reduce el tamaño en móviles */
+    }
+    .allergens {
+        font-size: 0.8rem; /* Emojis más pequeños en móviles */
+        text-align: left !important;
+    }
+    .emoji {
+        font-size: 0.8rem;
+    }
+    .table-row,
+    .bocadillos-row {
+        padding: 6px 0; /* Menos padding en móviles */
+    }
+    .table-row span:nth-child(2),
+    .bocadillos-row span:nth-child(2),
+    .bocadillos-row span:nth-child(3) {
+        font-size: 1rem;
+    }
+}
+
+/*===============================*/
 /* Menu Section (Carta) */
-
+/*==============================*/
 .menu-section {
     margin-top: 30px;
     padding: 60px 20px;
@@ -2374,3 +2440,12 @@ ul li:last-child {
       max-height: 40px;
     }
   }
+/* nuevo */
+.table-row .emoji,
+.bocadillos-row .emoji {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0.8;
+}
