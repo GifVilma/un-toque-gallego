@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     initializeMemoryCards();
     initializeLocationToggle();
 
-    // === Menú de Navegación ===
     const menuCheckbox = document.getElementById("menu"),
           navbar = document.querySelector(".navbar"),
           menuItems = document.querySelectorAll(".has-submenu > a"),
@@ -175,7 +174,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // === Descargar carta desde botón del modal ===
     const downloadButton = document.querySelector('#carta-modal .btn-download-modal');
     if (downloadButton) {
         downloadButton.addEventListener('click', (e) => {
@@ -185,7 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Cerrar modales si se hace clic fuera
     window.onclick = function(event) {
         const cartaModal = document.getElementById("carta-modal");
         const modal = document.getElementById("modal");
@@ -197,7 +194,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // === Footer - Políticas de Privacidad con animación ===
     const legalLinks = document.querySelectorAll('.legal-link');
     const legalContents = document.querySelectorAll('.legal-content');
     const closeButtons = document.querySelectorAll('.close-legal');
@@ -241,12 +237,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // === Anclas con scroll suave ===
     const anchorLinks = document.querySelectorAll('a[href^="#"]:not(.nav-menu a):not(.btn-download-modal):not(.emoji a):not([href^="tel:"]):not([href^="mailto:"])');
     anchorLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const href = link.getAttribute('href');
+            const href = link.getAttribute("href");
             const target = document.querySelector(href);
             if (target) {
                 const headerHeight = document.querySelector('.header').offsetHeight || 85;
@@ -262,7 +257,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // === Enlaces de Teléfono ===
     const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
     const phoneMessage = document.getElementById('phone-message');
 
@@ -284,25 +278,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // === Botón Scroll to Top ===
-    const existingScrollToTopBtn = document.querySelector('.scroll-to-top');
-    if (!existingScrollToTopBtn) {
-        const scrollToTopBtn = document.createElement('button');
-        scrollToTopBtn.innerHTML = '↑';
-        scrollToTopBtn.className = 'scroll-to-top';
-        document.body.appendChild(scrollToTopBtn);
-
+    // === Botón Scroll to Top (#scrollTopBtn) ===
+    const scrollToTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollToTopBtn) {
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-    }
 
-    window.addEventListener('scroll', () => {
-        const scrollToTopBtn = document.querySelector('.scroll-to-top');
-        if (window.scrollY > 300) {
-            scrollToTopBtn.style.display = 'flex';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    });
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'flex';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+    }
 });
