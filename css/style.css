@@ -2052,19 +2052,26 @@ ul li:last-child {
     position: relative;
     animation: scaleUp 0.4s ease forwards;
   }
-  
-  .legal-inner h3 {
+
+.legal-inner h3 {
     font-family: var(--font-encabezados, 'Arial, sans-serif');
     font-size: 20px;
     margin-bottom: 1rem;
   }
   
   .legal-inner p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    text-align: justify;
+    font-size: 0.6rem;
+    line-height: 1;
+    color: var(--color-cuaternario);
   }
-  
+  @media (max-width: 768px) {
+    .legal-inner p {
+      font-size: 0.6rem;
+      padding: 0 5px;
+    }
+  } 
+
   .close-legal {
     display: block;
     margin: 20px auto;
