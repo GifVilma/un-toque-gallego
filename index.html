@@ -1,1036 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Meta básicos -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
   <!-- SEO -->
   <title>Cervecería Un Toque Gallego | Cocina Gallega y Española en Madrid</title>
   <meta name="description" content="Descubre la auténtica cocina gallega y española en Cervecería Un Toque Gallego, Madrid. Mariscos frescos, pulpo a la gallega, tortilla de patata y más. Reserva ahora.">
   <meta name="keywords" content="restaurante gallego Madrid, cocina gallega, mariscos Madrid, pulpo a la gallega, tortilla de patata, carta gallega, Un Toque Gallego, reserva restaurante">
   <meta name="author" content="Cervecería Un Toque Gallego">
-  <meta name="robots" content="index, follow">
+      <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#01172e">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Cervecería Un Toque Gallego">
-  <meta property="og:description" content="Disfruta lo mejor de la gastronomía gallega y española en Madrid.">
-  <meta property="og:image" content="img/untoquegallego.png">
-  <meta property="og:url" content="https://untoquegallego.com">
-  <meta property="og:site_name" content="Cervecería Un Toque Gallego">
+    <!-- Canonical e idioma -->
+    <link rel="canonical" href="https://untoquegallego.com/">
+    <link rel="alternate" href="https://untoquegallego.com/" hreflang="es-ES">
+    <link rel="alternate" href="https://untoquegallego.com/" hreflang="x-default">
 
-  <!-- Favicon -->
-  <link rel="icon" href="img/favicon.ico">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://untoquegallego.com/">
+    <meta property="og:site_name" content="Un Toque Gallego">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Un Toque Gallego | Restaurante gallego en Madrid">
+    <meta property="og:description" content="Mariscos frescos, pulpo a la gallega y arroces caldosos en Madrid (Ciudad Lineal). Reserva: 916 34 38 88.">
+    <meta property="og:image" content="https://untoquegallego.com/img/fondo-web-inicio.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Un Toque Gallego - Restaurante gallego en Madrid">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://untoquegallego.com/">
+    <meta name="twitter:title" content="Un Toque Gallego | Restaurante gallego en Madrid">
+    <meta name="twitter:description" content="Mariscos frescos, pulpo a la gallega y arroces caldosos en Madrid (Ciudad Lineal). Reserva: 916 34 38 88.">
+    <meta name="twitter:image" content="https://untoquegallego.com/img/fondo-web-inicio.jpg">
 
-  <!-- JS Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/logo-untoquegallego.png">
+
+    <!-- Precarga imagen principal (si es hero above-the-fold) -->
+    <link rel="preload" as="image" href="/img/fondo-web-inicio.jpg" fetchpriority="high">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/carta-pdf.css">
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Un Toque Gallego",
+      "url": "https://untoquegallego.com/",
+      "description": "Restaurante gallego en Madrid especializado en mariscos frescos, arroces y gastronomía gallega auténtica.",
+      "telephone": "+34916343888",
+      "email": "untoquegallego@gmail.com",
+      "priceRange": "$$",
+      "servesCuisine": ["Gallega", "Española"],
+      "acceptsReservations": true,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida del Marqués de Corbera 53",
+        "addressLocality": "Madrid",
+        "addressRegion": "Comunidad de Madrid",
+        "postalCode": "28017",
+        "addressCountry": "ES"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "06:00",
+          "closes": "23:00"
+        }
+      ]
+    }
+    </script>
 </head>
-
 <body>
+    <!-- Botón menú móvil -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Logo -->
+    <a href="#inicio" class="logo" data-section="inicio" aria-label="Inicio">
+        <div class="logo-shield">
+            <img src="img/logo-untoquegallego.png" alt="Un Toque Gallego" loading="lazy">
+        </div>
+        <div class="logo-text">Un Toque Gallego</div>
+    </a>
+
+    <!-- Header -->
     <header class="header">
-        <div class="menu container">
-            <!-- Menú Hamburguesa (checkbox) -->
-            <input type="checkbox" id="menu">
-            <label for="menu">
-                <span class="menu-texto">Menú</span>
-                <img src="img/menu.png" alt="Menú" class="menu-icono">
-            </label>
-            <!-- Navegación - Menú Principal -->
-            <nav class="navbar">
-                <ul class="nav-menu">
-                    <li><a href="#home" class="links">Inicio</a></li>
-                    <li class="has-submenu">
-                        <a href="#">Desayunos y Meriendas</a> <!-- 1er Sub Menu (Desayunos y meriendas) -->
-                        <ul class="submenu">
-                            <li><a href="#desayunos">Desayunos y Meriendas</a></li>
-                            <li><a href="#tostas">Tostas y Hamburguesas</a></li>
-                            <li><a href="#bocadillos">Bocadillos y Montados</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-submenu">
-                        <a href="#">Carta</a> <!-- 2do Sub Menu (Carta) -->
-                        <ul class="submenu">
-                            <li><a href="#raciones">Nuestras Raciones</a></li>
-                            <li><a href="#verduras">Verduras y Ensaladas</a></li>
-                            <li><a href="#cuchara">De Cuchara</a></li>
-                            <li><a href="#mariscos">Mariscos y Pescados</a></li>
-                            <li><a href="#arroces">Arroces</a></li>
-                            <li><a href="#carnes">Carnes</a></li>
-                            <li><a href="#tortillas">Tortillas y Revueltos</a></li>
-                            <li><a href="#postres">Postres</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-submenu">
-                        <a href="#">Menús</a> <!-- 3er Sub Menu (Menús) -->
-                        <ul class="submenu">
-                            <li><a href="#menus">Menú Del Día</a></li>
-                            <li><a href="#weekend-menus">Menú Fin de Semana</a></li>
-                            <li><a href="#special-menus">Menús Especiales</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#para-llevar">Para llevar</a></li>
-                    <li><a href="#quienes-somos">Quienes Somos</a></li>
-                    <li><a href="#llamanos" class="btn-llamanos">Llámanos</a></li>
-                </ul>
-            </nav>
+        <div class="container">
+            <div class="header-content">
+                <!-- NAV DESKTOP -->
+                <nav class="nav" role="navigation" aria-label="Menú principal">
+                    <div class="nav-item"><button class="nav-link active" data-section="inicio" type="button">Inicio</button></div>
+                    <div class="nav-item"><button class="nav-link" data-section="desayunos" type="button">Desayunos y Meriendas</button></div>
+                    <div class="nav-item"><button class="nav-link" data-section="carta" type="button">Carta</button></div>
+                    <div class="nav-item"><button class="nav-link" data-section="menus" type="button">Menús</button></div>
+                    <div class="nav-item"><button class="nav-link" data-section="nosotros" type="button">Nosotros</button></div>
+                </nav>
+
+                <!-- NAV MÓVIL -->
+                <nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Menú móvil">
+                    <div class="mobile-nav-item"><button class="nav-mobile-link active" data-section="inicio" type="button">Inicio</button></div>
+                    <div class="mobile-nav-item"><button class="nav-mobile-link" data-section="desayunos" type="button">Desayunos y Meriendas</button></div>
+                    <div class="mobile-nav-item"><button class="nav-mobile-link" data-section="carta" type="button">Carta</button></div>
+                    <div class="mobile-nav-item"><button class="nav-mobile-link" data-section="menus" type="button">Menús</button></div>
+                    <div class="mobile-nav-item"><button class="nav-mobile-link" data-section="nosotros" type="button">Nosotros</button></div>
+                </nav>
+            </div>
         </div>
     </header>
-    <!-- Logo flotante -->
-    <figure class="logo-flotante">
-        <img src="img/untoquegalego.png" alt="Logo Un Toque Gallego">
-    </figure>
-    
-    <main>    
-    <div class="parallax-wrapper">
-        <!-- Inicio -->
-        <section id="home">
-            <div class="contenedor-botones">
-                <figure class="letrero">
-                    <img src="img/letrero.png" alt="letrero Un Toque Gallego">
-                </figure>
-                <h1>¡Bienvenido! Disfruta lo mejor de la gastronomía gallega y española: mariscos frescos, arroces y la clásica tortilla de patata. ¡Sabores auténticos que te conquistarán</h1>
-                <div class="botones-fila">
-                    <a href="#" onclick="openCartaModal()" class="btn-carta">Descargar Carta</a>
-                    <a href="#llamanos" class="btn-reserva">Reservar Mesa</a>
-                </div>           
-            </div>        
-            <!-- Modal para "Descargar Carta" y reservar mesa -->
-            <div id="carta-modal" class="modal">
-                <span class="close" onclick="closeCartaModal()">×</span>
-                <img class="modal-content" id="carta-modal-img" src="img/carta-un-toque-gallego.jpg" alt="Nuestra carta">
-                <a href="#" class="btn-download-modal">Descargar</a>
-            </div>
-        </section>
-       <!-- *********************************** -->
-       <!-- Bento Grid - Desayunos, Tostas y Bocadillos - Menú Principal -->
-       <div class="desayunos-meriendas">
-        <!-- Sección Desayunos -->
-        <section id="desayunos" class="bento-box">
-          <h2>Desayunos y Meriendas</h2>
-          <p>Comienza el día o repón energías con nuestras opciones dulces y saladas: bollería, revueltos, zumos y más.</p>
-          <img src="img/desayunos.jpg" alt="Desayuno" class="desa-img">
-          <div class="content">
-            <div class="bento-table">
-              <h3>Café, Infusión, Refresco o Caña</h3>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Más Bollería</span><span class="allergens"><span class="emoji">🌾</span></span></span>
-                <span>2,50€</span>
-              </div>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Barra con tomate y aceite</span><span class="allergens"><span class="emoji">🌾</span></span></span>
-                <span>2,80€</span>
-              </div>
-              <h3>Sándwich</h3>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Mixto</span><span class="allergens"><span class="emoji">🧀</span><span class="emoji">🌾</span></span></span>
-                <span>4,70€</span>
-              </div>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Queso, lechuga y tomate</span><span class="allergens"><span class="emoji">🧀</span><span class="emoji">🌾</span></span></span>
-                <span>4,70€</span>
-              </div>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Atún, tomate y lechuga</span><span class="allergens"><span class="emoji">🐟</span><span class="emoji">🌾</span></span></span>
-                <span>4,70€</span>
-              </div>
-              <h3>Revueltos</h3>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Revueltos de Huevo</span><span class="allergens"><span class="emoji">🥚</span></span></span>
-                <span>4,00€</span>
-              </div>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Revueltos de Atún</span><span class="allergens"><span class="emoji">🐟</span></span></span>
-                <span>4,00€</span>
-              </div>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Revueltos de Jamón York</span><span class="allergens"><span class="emoji">🥚</span></span></span>
-                <span>4,00€</span>
-              </div>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Zumo Natural de Naranja</span></span>
-                <span>2,10€</span>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Sección Tostas y Hamburguesas -->
-        <section id="tostas" class="bento-box">
-          <h2>Tostas y Hamburguesas</h2>
-          <p>Desde la jugosa Tosta de Jamón Ibérico con Tumaca, hasta la irresistible Hamburguesa de Vacuno.</p>
-          <img src="img/tostas.webp" alt="Tostas" class="desa-img">
-          <div class="content">
-            <div class="bento-table">
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Tosta de Jamón Ibérico con Tumaca</span>
-                <span class="allergens"><span class="emoji">🌾</span></span></span>
-                <span>9,50€</span>
-              </div>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Tosta de Solomillo con queso y cebolla caramelizada</span>
-                <span class="allergens"><span class="emoji">🌾</span></span></span>
-                <span>8,00€</span>
-              </div>
-              <div class="table-row">
-                <span class="item-details"><span class="item-name">Hamburguesa Mixta con lechuga, tomate y queso</span>
-                <span class="allergens"><span class="emoji">🌾</span></span></span>
-                <span>7,50€</span>
-              </div>
-              <div class="table-row">
-                <span class="item-details">
-                    <span class="item-name">Hamburguesa de Vacuno con todos los extras</span>
-                    <span class="allergens"><span class="emoji">🌾</span></span>
-                </span>
-                <span>9,50€</span>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Sección Bocadillos y Montados -->
-        <section id="bocadillos" class="bento-box">
-          <h2>Bocadillos y Montados</h2>
-          <p>Elige tu favorito entre nuestras opciones de bocadillos y montados.</p>
-          <img src="img/bocadill-jamón.jpeg" alt="Bocadillos" class="desa-img">
-          <div class="content">
-            <div class="bocadillos-table">
-              <div class="bocadillos-header-row">
-                <span></span>
-                <span><img src="img/bocadillo.png" alt="Bocadillo"></span>
-                <span><img src="img/montado.png" alt="Montado"></span>
-              </div>
-              <div class="bocadillos-row">
-                <span class="item-details">
-                  <span class="item-name">Jamón Ibérico</span>
-                  <span class="allergens"><span class="emoji">🌾</span></span>
-                </span>
-                <span>5,20€</span>
-                <span>3,80€</span>
-              </div>
-              <div class="bocadillos-row">
-                <span class="item-details">
-                  <span class="item-name">Bacón</span>
-                  <span class="allergens"><span class="emoji">🌾</span></span>
-                </span>
-                <span>5,00€</span>
-                <span>3,80€</span>
-              </div>
-              <div class="bocadillos-row">
-                <span class="item-details">
-                  <span class="item-name">Bacón con queso</span>
-                  <span class="allergens"><span class="emoji">🌾</span><span class="emoji">🧀</span></span>
-                </span>
-                <span>5,50€</span>
-                <span>4,00€</span>
-              </div>
-              <div class="bocadillos-row">
-                <span class="item-details">
-                  <span class="item-name">Lomo adobado</span>
-                  <span class="allergens"><span class="emoji">🌾</span></span>
-                </span>
-                <span>5,00€</span>
-                <span>3,80€</span>
-              </div>
-              <div class="bocadillos-row">
-                <span class="item-details">
-                  <span class="item-name">Lomo adobado con queso</span>
-                  <span class="allergens"><span class="emoji">🌾</span><span class="emoji">🧀</span></span>
-                </span>
-                <span>5,50€</span>
-                <span>4,00€</span>
-              </div>
-              <div class="bocadillos-row">
-                <span class="item-details">
-                  <span class="item-name">Panceta</span>
-                  <span class="allergens"><span class="emoji">🌾</span></span>
-                </span>
-                <span>5,00€</span>
-                <span>3,80€</span>
-              </div>
-              <div class="bocadillos-row">
-                <span class="item-details">
-                  <span class="item-name">Calamares</span>
-                  <span class="allergens"><span class="emoji">🌾</span><span class="emoji">🦑</span></span>
-                </span>
-                <span>5,00€</span>
-                <span>3,80€</span>
-              </div>
-              <div class="bocadillos-row">
-                <span class="item-details">
-                  <span class="item-name">Tortilla de Patata</span>
-                  <span class="allergens"><span class="emoji">🌾</span><span class="emoji">🥚</span></span>
-                </span>
-                <span>4,80€</span>
-                <span>3,60€</span>
-              </div>
-              <div class="bocadillos-row">
-                <span class="item-details">
-                  <span class="item-name">Tortilla Francesa</span>
-                  <span class="allergens"><span class="emoji">🌾</span><span class="emoji">🥚</span></span>
-                </span>
-                <span>5,00€</span>
-                <span>3,80€</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      
 
-        <!-- *********************************** -->
-        <!-- Bento Grid - Carta - Menú principal -->  
-        <section id="carta" class="menu-section">
-            <h2>Carta</h2>
-            <p class="menu-intro">En nuestra carta, el alma de Galicia se mezcla con el latir de Madrid. Desde el crujir de unas croquetas caseras hasta el aroma salado del mar en un arroz caldoso, cada plato es un viaje: tradición en cada bocado, frescura en cada sorbo. Sabores que cuentan historias, precios que invitan a quedarse.</p>
-            <hr class="menu-divider">
-            <div class="menu-container">
-                <!-- Nuestras Raciones -->
-                <section id="raciones" class="menu-item">
-                    <h3>Nuestras Raciones</h3>
-                    <div class="menu-content">
-                        <div class="menu-table">
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Jamón Ibérico</span>
-                                    <span class="emoji"></span>
-                                </div>
-                                <span>22,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Lacón a la Gallega</span>
-                                    <span class="emoji"></span>
-                                </div>
-                                <span>11,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Torreznos de Soria</span>
-                                    <span class="emoji">🧪</span>
-                                </div>
-                                <span>10,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Alitas Fritas o a la Barbacoa</span>
-                                    <span class="emoji">🧪🌭🌱</span>
-                                </div>
-                                <span>9,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Croquetas Caseras de Jamón</span>
-                                    <span class="emoji">🧀🌾🥚</span>
-                                </div>
-                                <span>11,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Oreja a la Plancha</span>
-                                    <span class="emoji"></span>
-                                </div>
-                                <span>10,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Patatas Bravas o Dos Salsas</span>
-                                    <span class="emoji">🥚🧪🌭</span>
-                                </div>
-                                <span>5,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Huevos Rotos con Jamón</span>
-                                    <span class="emoji">🥚</span>
-                                </div>
-                                <span>9,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Empanada Gallega</span>
-                                    <span class="emoji">🌾🐟</span>
-                                </div>
-                                <span>6,50€</span>
-                            </div>
-                            <p>Marisco por Encargo: Centollo, Buey de Mar, Cigalas, Nécoras, Bogavante Nacional, Ostras (🦐🦑)</p>
-                            <p>Precios según mercado</p>
-                        </div>
-                    </div>  
-                </section> 
-                <!-- Mariscos y Pescados -->
-                <section id="mariscos" class="menu-item">
-                    <h3>Mariscos y Pescados</h3>
-                    <div class="menu-content">
-                        <div class="menu-table">
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Pulpo a la Gallega</span>
-                                    <span class="emoji">🦑</span>
-                                </div>
-                                <span>22,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Mejillones Tigre</span>
-                                    <span class="emoji">🦑🌾🧀🥚</span>
-                                </div>
-                                <span>12,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Boquerones Fritos</span>
-                                    <span class="emoji">🐟🌾</span>
-                                </div>
-                                <span>9,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Boquerones en Vinagre</span>
-                                    <span class="emoji">🐟🧪</span>
-                                </div>
-                                <span>9,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Calamares a la Andaluza</span>
-                                    <span class="emoji">🦑🌾</span>
-                                </div>
-                                <span>9,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Chipirones a la Plancha</span>
-                                    <span class="emoji">🦑</span>
-                                </div>
-                                <span>15,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Mejillones al Vapor o Picantes</span>
-                                    <span class="emoji">🦑</span>
-                                </div>
-                                <span>10,60€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Gambas de Huelva, cocidas o a la plancha</span>
-                                    <span class="emoji">🦐</span>
-                                </div>
-                                <span>25,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Navajas a la Plancha</span>
-                                    <span class="emoji">🦑</span>
-                                </div>
-                                <span>15,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Gambas al Ajillo</span>
-                                    <span class="emoji">🦐</span>
-                                </div>
-                                <span>16,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Zamburiñas a la Plancha</span>
-                                    <span class="emoji">🦑</span>
-                                </div>
-                                <span>15,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Sepia al Ajillo</span>
-                                    <span class="emoji">🦑</span>
-                                </div>
-                                <span>14,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Langostinos Tigre</span>
-                                    <span class="emoji">🦐</span>
-                                </div>
-                                <span>23,00€</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Verduras y Ensaladas -->
-                <section id="verduras" class="menu-item">
-                    <h3>Verduras y Ensaladas</h3>            
-                    <div class="menu-content">
-                        <div class="menu-table">
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Ensaladilla Rusa</span>
-                                    <span class="emoji">🥚🐟🌭</span>
-                                </div>
-                                <span>6,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Ensalada Mixta</span>
-                                    <span class="emoji">🥚🐟🧪</span>
-                                </div>
-                                <span>6,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Ensalada de Tomate y Cebolla</span>
-                                    <span class="emoji">🧪</span>
-                                </div>
-                                <span>4,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Tomate Rosa con Ventresca de Bonito</span>
-                                    <span class="emoji">🐟</span>
-                                </div>
-                                <span>13,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Anchoas de Santoña con Tomate y Pimientos Asados</span>
-                                    <span class="emoji">🐟</span>
-                                </div>
-                                <span>14,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Flor de Alcachofa con Virutas de Jamón</span>
-                                    <span class="emoji"></span>
-                                </div>
-                                <span>8,50€</span>
-                            </div>
-                        </div>
-                    </div>        
-                </section>
-                <!-- De Cuchara -->
-                <section id="cuchara" class="menu-item">
-                    <h3>De Cuchara</h3>
-                    <div class="menu-content">
-                        <div class="menu-table">
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Callos con Garbanzos</span>
-                                    <span class="emoji">🌾🧪</span>
-                                </div>
-                                <span>10,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Judías Blancas con Oreja</span>
-                                    <span class="emoji">🌾🧪</span>
-                                </div>
-                                <span>9,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Pochas con Bogavante</span>
-                                    <span class="emoji">🦐</span>
-                                </div>
-                                <span>17,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Caldo Gallego</span>
-                                    <span class="emoji">🌾🧪</span>
-                                </div>
-                                <span>6,50€</span>
-                            </div>
-                        </div>
-                    </div>            
-                </section>
-                <!-- Arroces -->
-                <section id="arroces" class="menu-item">
-                    <h3>Arroces</h3>
-                    <div class="menu-content">
-                        <div class="menu-table">
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Arroz Caldoso con Bogavante</span>
-                                    <span class="emoji">🦐🐟</span>
-                                </div>
-                                <span>21,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Arroz Meloso con Mariscos</span>
-                                    <span class="emoji">🦐🦑🐟</span>
-                                </div>
-                                <span>14,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Arroz Negro con Sepia</span>
-                                    <span class="emoji">🦑🐟</span>
-                                </div>
-                                <span>14,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Arroz con Pollo de Corral</span>
-                                    <span class="emoji"></span>
-                                </div>
-                                <span>15,50€</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Carnes -->
-                <section id="carnes" class="menu-item">
-                    <h3>Carnes</h3>
-                    <div class="menu-content">
-                        <div class="menu-table">
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Entrecot de Ternera 300 gr</span>
-                                    <span class="emoji"></span>
-                                </div>
-                                <span>21,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Chuletón de Ternera 600 gr</span>
-                                    <span class="emoji"></span>
-                                </div>
-                                <span>35,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Cachopo Asturiano 250 gr</span>
-                                    <span class="emoji">🧀🥚🌾</span>
-                                </div>
-                                <span>13,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Carne x Encargo: Cochinillo, cordero asado</span>
-                                    <span class="emoji">🧀🥚🌾</span>
-                                </div>
-                                <span>previo acuerdo</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Tortillas y Revueltos -->
-                <section id="tortillas" class="menu-item">
-                    <h3>Tortillas y Revueltos</h3>
-                    <div class="menu-content">
-                        <div class="menu-table">
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Tortilla de Patatas</span>
-                                    <span class="emoji">🥚</span>
-                                </div>
-                                <span>14,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Revuelto de Bacón</span>
-                                    <span class="emoji">🥚🧪</span>
-                                </div>
-                                <span>6,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Tortilla por Encargo con o sin Cebolla</span>
-                                    <span class="emoji">🥚</span>
-                                </div>
-                                <span>16,00€</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Postres -->
-                <section id="postres" class="menu-item">
-                    <h3>Postres</h3>
-                    <div class="menu-content">
-                        <div class="menu-table">
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Filloa Rellena de Crema</span>
-                                    <span class="emoji">🧀🥚🌾</span>
-                                </div>
-                                <span>5,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Coulán de Chocolate</span>
-                                    <span class="emoji">🥚🧀🌾</span>
-                                </div>
-                                <span>5,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Tarta de Queso Casera</span>
-                                    <span class="emoji">🧀🥚🌾</span>
-                                </div>
-                                <span>5,00€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Helados Vainilla o Chocolate</span>
-                                    <span class="emoji">🧀🥚</span>
-                                </div>
-                                <span>4,50€</span>
-                            </div>
-                            <div class="menu-row">
-                                <div class="menu-dish">
-                                    <span>Sorbete Limón</span>
-                                    <span class="emoji">🥚🧪</span>
-                                </div>
-                                <span>4,50€</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Alérgenos -->
-                <section id="alergenos" class="menu-item">
-                    <h3>Alérgenos</h3>
-                    <p class="carta-descripcion">Consulta los ingredientes que pueden causar alergias alimentarias. Símbolos usados en toda la carta:</p>
-                    <div class="menu-content">
-                        <div class="menu-table">
-                            <div class="menu-row">
-                                <span>Huevo</span>
-                                <span class="emoji">🥚</span>
-                            </div>
-                            <div class="menu-row">
-                                <span>Lácteos</span>
-                                <span class="emoji">🧀</span>
-                            </div>
-                            <div class="menu-row">
-                                <span>Gluten</span>
-                                <span class="emoji">🌾</span>
-                            </div>
-                            <div class="menu-row">
-                                <span>Pescado</span>
-                                <span class="emoji">🐟</span>
-                            </div>
-                            <div class="menu-row">
-                                <span>Crustáceos</span>
-                                <span class="emoji">🦐</span>
-                            </div>
-                            <div class="menu-row">
-                                <span>Moluscos</span>
-                                <span class="emoji">🦑</span>
-                            </div>
-                            <div class="menu-row">
-                                <span>Mostaza</span>
-                                <span class="emoji">🌭</span>
-                            </div>
-                            <div class="menu-row">
-                                <span>Dióxido de Azufre y Sulfitos</span>
-                                <span class="emoji">🧪</span>
-                            </div>
-                            <div class="menu-row">
-                                <span>Soja</span>
-                                <span class="emoji">🌱</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
- 
-        <!-- *********************************** -->
-        <!-- Menús Diarios -->
-        <section id="menus" class="menu-section">
-            <h2>Menús del Día</h2>
-            <p class="menu-intro">Disfruta de nuestros menús del día, elaborados con ingredientes frescos y de calidad que reflejan lo mejor de la gastronomía gallega y española. Saborea platos como Judías Blancas con Oreja, Espaguetis Salteados con Verduras, Calamares Andaluza, Pollo Asado, Lentejas de la Abuela, Pescado del Día y mucho más. Con opciones para todos los gustos, desde carnes a la plancha hasta sabrosas ensaladas, cada comida es una experiencia única y casera. ¡Ven a disfrutar de lo mejor en cada bocado!</p>
-            <div class="menu-footer">
-                <p class="menu-price-final">Precio: <span class="price-circle">11,50€</span></p>
-                <p class="menu-includes">Incluye: Pan, Bebida, Postre o Café</p>
-                <p class="menu-includes">Opciones: Tarta de Santiago, Galleta, Orujo, Flan, Arroz con Leche, Pudin 🧀 🥚</p>
-            </div>
-        </section>
-        <!-- Menús Fin de Semana -->
-        <section id="weekend-menus" class="menu-section">
-            <h2>Menús Fin de Semana</h2>
-            <p class="menu-intro">Saborea nuestros menús especiales de fin de semana, diseñados para deleitar tu paladar con lo mejor de la gastronomía gallega y española. Disfruta de una experiencia única con platos cuidadosamente elaborados, perfectos para compartir con familia o amigos. ¡Un festín para los sentidos!</p>
-            <div class="menu-footer">
-                <p class="menu-price-final">Precio: <span class="price-circle">13€</span></p>
-                <p class="menu-includes">Incluye: Pan, Bebida, Postre o Café</p>
-                <p class="menu-includes">Opciones: Tarta de Santiago, Galleta, Orujo, Flan, Arroz con Leche, Pudin 🧀 🥚</p>
-            </div>
-        </section>
-                
-        <!-- Menús Especiales -->
-        
-        <section id="special-menus" class="menu-section">
-            <div class="text-center mb-4">
-              <h2>Menús Especiales</h2>
-              <p class="lead menu-general-description">
-                Diseñados especialmente para reuniones familiares, eventos empresariales y celebraciones.
-                Ofrecemos una selección de platos variados que se ajustan a las necesidades de cada grupo.
-                Podrás disfrutar de una experiencia única, casera y adaptada a tus preferencias.
-              </p>
-            </div>
-          
-            <!-- Menú 1 -->
-            <div class="card mb-5">
-              <div class="card-header text-center bg-primary text-white">
-                <h3>Menú 1 - 30€</h3>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <!-- Primeros -->
-                  <div class="col-md-6">
-                    <h5 class="text-center mb-3">Primeros</h5>
-                    <div class="mb-3">
-                      <img src="img/jamon-iberico.jpg" class="img-fluid rounded" alt="Jamón Ibérico con pan tumaca">
-                      <p>Jamón Ibérico con pan tumaca</p>
-                    </div>
-                    <div class="mb-3">
-                      <img src="img/ventresca-ensalada.jpg" class="img-fluid rounded" alt="Ensalada de Ventresca con pimientos asados">
-                      <p>Ensalada de Ventresca con pimientos asados</p>
-                    </div>
-                    <div class="mb-3">
-                      <img src="img/Zamburinas.jpg" class="img-fluid rounded" alt="Zamburiñas gratinadas">
-                      <p>Zamburiñas gratinadas <span class="text-muted">🧈 🐚</span></p>
-                    </div>
-                  </div>
-          
-                  <!-- Segundos -->
-                  <div class="col-md-6">
-                    <h5 class="text-center mb-3">Segundos</h5>
-                    <div class="mb-3">
-                      <img src="img/Chuletitas.jpg" class="img-fluid rounded" alt="Chuletitas de cordero">
-                      <p>Chuletitas de cordero</p>
-                    </div>
-                    <div class="mb-3">
-                      <img src="img/arroz-mariscos.jpg" class="img-fluid rounded" alt="Arroz con Mariscos">
-                      <p>Arroz con Mariscos <span class="text-muted">🦐 🌾</span></p>
-                    </div>
-                    <div class="mb-3">
-                      <img src="img/rodaballo.jpg" class="img-fluid rounded" alt="Rodaballo a la espalda">
-                      <p>Rodaballo a la espalda</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <!-- Menú 2 -->
-            <div class="card mb-5">
-              <div class="card-header text-center bg-primary text-white">
-                <h3>Menú 2 - 38€</h3>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <!-- Primeros -->
-                  <div class="col-md-6">
-                    <h5 class="text-center mb-3">Primeros</h5>
-                    <div class="mb-3">
-                      <img src="img/pulpo-galega.jpeg" class="img-fluid rounded" alt="Pulpo a la Gallega">
-                      <p>Pulpo a la Gallega <span class="text-muted">🐙</span></p>
-                    </div>
-                    <div class="mb-3">
-                      <img src="img/ensaladilla.webp" class="img-fluid rounded" alt="Ensaladilla rusa">
-                      <p>Ensaladilla rusa <span class="text-muted">🥚</span></p>
-                    </div>
-                    <div class="mb-3">
-                      <img src="img/gambones-ajillo.jpg" class="img-fluid rounded" alt="Gambones al ajillo">
-                      <p>Gambones al ajillo <span class="text-muted">🦐</span></p>
-                    </div>
-                  </div>
-          
-                  <!-- Segundos -->
-                  <div class="col-md-6">
-                    <h5 class="text-center mb-3">Segundos</h5>
-                    <div class="mb-3">
-                      <img src="img/chuleton-ternera.webp" class="img-fluid rounded" alt="Chuletón de ternera">
-                      <p>Chuletón de ternera</p>
-                    </div>
-                    <div class="mb-3">
-                      <img src="img/arroz-mariscos.jpg" class="img-fluid rounded" alt="Arroz con Mariscos">
-                      <p>Arroz con Mariscos <span class="text-muted">🦐 🌾</span></p>
-                    </div>
-                    <div class="mb-3">
-                      <img src="img/merluza-horno.jpg" class="img-fluid rounded" alt="Merluza al horno">
-                      <p>Merluza al horno</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <!-- Nota final -->
-            <div class="text-center mt-4">
-              <p class="font-weight-bold menu-note">
-                Platos personalizados según alergias o intolerancias y la calidad que caracteriza nuestros menús.
-                ¡Consulta con nuestro equipo para planificar tu evento!
-              </p>
-            </div>
-        </section>
-
-
-
-        <!-- Sección Para llevar -->
-        <section id="para-llevar" class="para-llevar container">
-            <h2>Para llevar</h2>
-            <div class="para-llevar-contenido">
-                <div class="info-para-llevar">
-                    <p>Toda nuestra carta y menús están disponibles para llevar. Disfruta de tus platos favoritos en casa o donde prefieras. Solo tienes que llamarnos o hacer tu pedido, ¡y nosotros lo preparamos para que te lo lleves!</p>
-                    <a href="#llamanos" class="btn-llamanos">Haz tu pedido</a>
-                </div>
-                <div class="imagen-carta">
-                    <img src="img/carta-un-toque-gallego.jpg" alt="Nuestra carta" class="carta-img" onclick="openModal()">
-                </div>
-            </div>
-        </section>
-
-        <!-- Modal para la imagen ampliada -->
-        <div id="modal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modal-img" src="img/carta-un-toque-gallego.jpg" alt="Nuestra carta">
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs" id="breadcrumbs" aria-label="Navegación actual">
+        <div class="container">
+            <nav class="breadcrumb-nav" aria-label="Migas de pan">
+                <a href="#" class="breadcrumb-home" data-section="inicio"><i class="fas fa-home"></i> Inicio</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current" id="breadcrumbCurrent">Inicio</span>
+            </nav>
         </div>
-          
-        
-        <!-- Sección Quienes Somos y Localización -->
-        <section id="quienes-somos" class="quienes-somos-section">
-            <section class="restaurant">
-                <div class="restaurant-content">
-                    <!-- Texto -->
-                    <div class="restaurant-description">
-                        <h2>Quiénes Somos</h2>
-                        <p>Desde hace más de dos años, <strong>Un Toque Gallego</strong>, liderado por Edwin Jorge, ha deleitado a madrileños y visitantes con una propuesta gastronómica que celebra las raíces más profundas de la cocina gallega y española.</p>
-                        <p>Situado en un enclave único, donde se cruzan el bullicio del metro, la vida del barrio y el dinamismo de las oficinas cercanas, nuestro restaurante se ha convertido en un rincón esencial para quienes buscan sabores auténticos y platos elaborados con pasión y maestría.</p>
-                        <p>El aroma del jamón ibérico recién cortado, la textura única del pulpo a la gallega, el sabor intenso del lacón, los crujientes torreznos de Soria y nuestra tortilla de patata que es pura nostalgia en cada bocado: jugosa, tierna y con ese punto perfecto que tanto cuesta encontrar. Se fusionan con mariscos frescos y una paella preparada con dedicación, en un menú que rinde homenaje a la tradición y la calidad.</p>
-                        <p>Con un ambiente acogedor, un servicio cercano y una cocina que respeta la esencia de cada ingrediente, Un Toque Gallego no solo ofrece comida: ofrece recuerdos, raíces y una experiencia que conecta con el corazón. ¡Ven a descubrir un pedacito de Galicia en Madrid!</p>
-                    </div>
-                    <!-- Imágenes -->
-                    <div class="restaurant-images">
-                        <img src="img/pancartauntoquegallego.webp" alt="Pancarta de Un Toque Gallego">
-                        <img src="img/restaurante-1.webp" alt="Interior de Un Toque Gallego 1">
-                        <img src="img/restaurante-2.webp" alt="Exterior de Un Toque Gallego 1">
-                        <!-- Botón para mostrar la localización -->
-                        <div class="toggle-container">
-                            <button id="toggle-localizacion" class="btn-localizacion" aria-label="Mostrar u ocultar la localización del restaurante">Localización</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        
-            <!-- Sección Localización -->
-            <div id="localizacion" class="localizacion container">
-                <h2>Encuéntranos</h2>
-            <div class="localizacion-contenido">
-                <div class="localizacion-columna">
-                    <img src="img/barra-image.jpeg" alt="Barra del restaurante Un Toque Gallego" loading="lazy">
-                </div>
-                <div class="localizacion-centro">
-                    <p><strong>Dirección:</strong> Avenida del Marqués de Corbera 53, Ciudad Lineal, 28017 Madrid, España</p>
-                    <a href="tel:+34656945489" class="btn-llamanos">Llámanos</a>
-                </div>
-                <div class="localizacion-columna">
-                    <div class="mapa">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.735468873258!2d-3.652058684611328!3d40.39261897936748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228b8e8f4e7b7%3A0x9c8e6f8e8f4e7b7!2sAv.%20del%20Marqu%C3%A9s%20de%20Corbera%2C%2053%2C%2028017%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1698765432109!5m2!1ses!2ses" 
-                            width="100%" 
-                            height="300" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                        </iframe>
-                    </div>
-            </div>
-        </section>
-    
-        
-            <!-- Sección de Contacto -->
-            <section id="llamanos" class="contacto container">
-                <h2>Contáctanos</h2>
-                <p>Estamos aquí para atenderte. Puedes llamarnos o escribirnos:</p>
-                <div class="contacto-info">
-                    <p><i class="fas fa-phone"></i> <strong>Teléfono Fijo:</strong> <a href="tel:+34916343888">916 34 38 88</a></p>
-                    <p><i class="fas fa-mobile-screen"></i> <strong>Móvil:</strong> <a href="tel:+34656945489">656 94 54 89</a></p>
-                    <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/+34656945489" target="_blank">656 94 54 89</a></p>
-                    <p><i class="fas fa-envelope"></i> <strong></strong> <a href="mailto:untoquegallego@gmail.com">untoquegallego@gmail.com</a></p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario de atención:</strong> Lunes a Domingo: 6:00 - 23:00 <br> (Cerramos por las tardes los jueves y domingos)</p>
-                </div>
-                <div id="phone-message" class="phone-message" style="display: none; margin-top: 10px; padding: 10px; background: #fff; color: #000; border-radius: 5px; text-align: center;"></div>
-            </section>    
-    
+    </div>
+
+    <!-- Barra de subcategorías móvil -->
+    <div class="mobile-subcategory-bar" id="mobileSubcategoryBar">
+        <div class="container">
+            <div class="subcategory-buttons" id="subcategoryButtons"></div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main class="main">
+        <div class="container">
+            <div id="content-container"></div>
+            <div id="inicio" data-section="inicio" style="height: 1px; margin-top: -120px; pointer-events: none;"></div>
+        </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Cervecería Un Toque Gallego</h3>
-                <p>Disfruta de nuestra pasión por la buena comida, la cerveza artesanal y el ambiente acogedor. En Avenida del Marqués de Corbera 53, te esperamos con los brazos abiertos de lunes a domingo, de 6:00 a 23:00 (cerramos tardes de jueves y domingos).</p>
+    <!-- Volver arriba -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Un Toque Gallego</h3>
+                <p>Auténtica gastronomía gallega en Madrid</p>
+                <address>Avenida del Marqués de Corbera 53, Madrid</address>
+                <p><strong>Tel:</strong> 
+                    <a href="tel:+34916343888">916 34 38 88</a> | 
+                    <a href="tel:+34656945489">656 94 54 89</a>
+                </p>
             </div>
-            <div class="footer-column">
-                <h3>Enlaces de Interés</h3>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
                 <ul>
-                    <li><a href="#" onclick="openCartaModal()">Carta</a></li>
-                    <li><a href="tel:+34656945489">Reservas</a></li>
+                    <li><button class="footer-nav-link" data-section="cartaTriptico" type="button">Ver Carta</button></li>
+                    <li><button class="footer-nav-link" data-section="reservas" type="button">Reservas</button></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h3>Síguenos</h3>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i>Facebook</a>
-                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i>Instagram</a>
-                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i>Twitter</a>
+            <div class="footer-section">
+                <h4>Horarios & Social</h4>
+                <p><strong>Lun-Dom:</strong> 6:00 - 23:00</p>
+                <p><small>*Cerramos tardes de jueves y domingos</small></p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/34656945489" target="_blank" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
-    
         <div class="footer-bottom">
-            <p>© Todos los derechos reservados. Cervecería Un Toque Gallego</p>
-            <div class="legal-links">
-                <a href="#" class="legal-link" data-target="aviso-legal">Aviso Legal</a> |
-                <a href="#" class="legal-link" data-target="politica-cookies">Política de Cookies</a> |
-                <a href="#" class="legal-link" data-target="proteccion-datos">Protección de Datos</a>
-            </div>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Un Toque Gallego. Todos los derechos reservados.</p>
         </div>
-    
-        
-        <!-- Contenedores legales -->
-        <div id="aviso-legal" class="legal-content">
-            <div class="legal-inner">
-                <h3>Aviso Legal</h3>
-                <p>Este sitio web es titularidad de <strong>Cervecería Un Toque Gallego</strong>, con domicilio en <strong>Avenida del Marqués de Corbera 53, Ciudad Lineal, 28017 Madrid, España</strong>.</p>
-                <p>El acceso y uso de esta web implica la aceptación de los términos recogidos en este aviso legal. Para cualquier consulta, contáctenos en el <strong>916 34 38 88</strong> o por correo electrónico a <strong>untoquegallego@gmail.com</strong>.</p>
-                <button class="close-legal">Cerrar</button>
-            </div>
-        </div>
-        <div id="politica-cookies" class="legal-content">
-            <div class="legal-inner">
-                <h3>Política de Cookies</h3>
-                <p>Este sitio web, propiedad de <strong>Cervecería Un Toque Gallego</strong>, utiliza cookies propias y de terceros para mejorar la experiencia de navegación, analizar el tráfico y ofrecer contenidos personalizados.</p>
-                <p><strong>¿Qué son las cookies?</strong> Son archivos que se almacenan en tu navegador y que ayudan al sitio a recordar tus preferencias.</p>
-                <p><strong>Tipos:</strong><br>
-                - Técnicas: esenciales para el funcionamiento.<br>
-                - De análisis: nos permiten conocer cómo navegas.<br>
-                - De terceros: como redes sociales o mapas.</p>
-                <p>Puedes gestionarlas desde la configuración de tu navegador o a través del mensaje de consentimiento en la web.</p>
-                <p>Si continúas navegando, consideramos que aceptas su uso. Para más información, contacta con nosotros.</p>
-                <button class="close-legal">Cerrar</button>
-            </div>
-        </div>
-        <div id="proteccion-datos" class="legal-content">
-            <div class="legal-inner">
-                <h3>Protección de Datos</h3>
-                <p>En <strong>Cervecería Un Toque Gallego</strong> tratamos tus datos personales conforme al <strong>Reglamento General de Protección de Datos (RGPD)</strong>.</p>
-                <p>Solo recopilamos información esencial para prestarte nuestros servicios. Tienes derecho a acceder, rectificar o eliminar tus datos personales en cualquier momento.</p>
-                <p>Para más información o ejercer tus derechos, contáctanos en el <strong>916 34 38 88</strong> o envíanos un correo a <strong>untoquegallego@gmail.com</strong>.</p>
-                <button class="close-legal">Cerrar</button>
-            </div>
-        </div>
-        <!-- Botón subir -->
-        <button id="scrollTopBtn" aria-label="Subir arriba" title="Volver arriba">&uarr;</button>
-    </footer>
-    
-<script src="js/scripts.js"></script> 
+    </div>
+</footer>
 
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/carta-pdf.js"></script>
 </body>
 </html>
