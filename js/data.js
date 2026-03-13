@@ -31,7 +31,7 @@ const restaurantData = {
 
                     <!-- TEXTO A LA IZQUIERDA (RESUMIDO) -->
                     <div class="nosotros-texto">
-                        <h2 class="nosotros-titulo">Un Toque Gallego</h2>
+                    
                         <p class="nosotros-parrafo">
                             Un Toque Gallego, de la mano de <strong>Edwin Jorge</strong>, es un restaurante de cocina española con un toque gallego situado en Ciudad Lineal, en el barrio de La Elipa en Madrid. Apostamos por la cocina casera, el buen producto y un ambiente cercano para disfrutar en cualquier momento del día.
                         </p>
