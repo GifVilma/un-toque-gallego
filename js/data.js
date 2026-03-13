@@ -5,13 +5,13 @@ const img = (src, alt) =>
 const restaurantData = {
     sections: {
         inicio: {
-            title: "Bienvenidos a Un Toque Gallego",
+            title: "Cervecería Un Toque Gallego",
             content: `
                 <section class="hero-section-inicio">
                     <div class="hero-content">
-                        <h2>¡Bienvenido a la Cervecería!</h2>
                         <h1>Un Toque Gallego</h1>
-                        <p class="hero-subtitle">Descubre la auténtica cocina gallega y española en el corazón de Madrid. Mariscos frescos, pulpo a la gallega, tortilla de patata y mucho más.</p>
+                        <h2>Restaurante de cocina española con toque gallego en Ciudad Lineal, Madrid</h2>
+                        <p class="hero-subtitle">Desayunos desde primera hora, tapas, raciones, mariscos, arroces y menú del día en la zona de La Elipa. Un lugar cercano para desayunar, comer o cenar en Madrid.</p>
                         <div class="hero-buttons">
                             <a href="#reservas" class="hero-button" data-section="reservas">Reserva / Para Llevar</a>
                             <a href="#" class="hero-button ver-carta-completa-btn">Ver carta completa</a>
@@ -33,13 +33,13 @@ const restaurantData = {
                     <div class="nosotros-texto">
                         <h2 class="nosotros-titulo">Un Toque Gallego</h2>
                         <p class="nosotros-parrafo">
-                            Un Toque Gallego, de la mano de <strong>Edwin Jorge</strong>, lleva conquistando a madrileños y visitantes con una cocina que celebra las raíces gallegas y españolas. En un enclave donde se mezclan barrio, metro y oficinas, nuestro restaurante se ha convertido en un punto de encuentro para quienes buscan sabor auténtico.
-                            </p>
-                        <p class="nosotros-parrafo">
-                            El jamón ibérico recién cortado, el pulpo a la gallega, el lacón, los torreznos de Soria y nuestra tortilla jugosa. se combinan con mariscos frescos y una paella hecha con mimo, creando un menú que honra tradición y calidad.
+                            Un Toque Gallego, de la mano de <strong>Edwin Jorge</strong>, es un restaurante de cocina española con un toque gallego situado en Ciudad Lineal, en el barrio de La Elipa en Madrid. Apostamos por la cocina casera, el buen producto y un ambiente cercano para disfrutar en cualquier momento del día.
                         </p>
                         <p class="nosotros-parrafo">
-                            Con un ambiente cercano y una cocina hecha con alma, <strong>Un Toque Gallego</strong> no solo alimenta: despierta recuerdos y emociones. ¡Ven a disfrutar un pedacito de Galicia en Madrid!
+                            En nuestra carta encontrarás tapas y raciones tradicionales como jamón ibérico, torreznos de Soria, tortilla jugosa, pulpo a la gallega, lacón y mariscos frescos, además de arroces y platos caseros elaborados cada día.
+                        </p>
+                        <p class="nosotros-parrafo">
+                            Nuestro restaurante en Ciudad Lineal se ha convertido en un lugar habitual para desayunar, comer, cenar o tomar algo con amigos. También ofrecemos menú del día en Madrid y servicio para llevar.
                         </p>
                     </div>
 
@@ -79,7 +79,7 @@ const restaurantData = {
             content: `
                 <div class="reservations-section">
                     <h2>Haz tu reserva de forma rápida y sencilla. </h2>
-                    <p class="section-description">¡Te esperamos!</p>
+                    <p class="section-description">Reserva tu mesa en Un Toque Gallego para desayunar, comer o cenar en nuestro restaurante de la Elipa, Madrid. También puedes hacer pedidos para llevar o consultar disponibilidad por teléfono.</p>
                     <form id="reservation-form" class="reservation-form">
                         <div class="form-group">
                             <label for="name">Nombre completo</label>
@@ -120,7 +120,10 @@ const restaurantData = {
                         <div class="hours">
                             <h3>Horarios</h3>
                             <p><strong>Lunes - Domingo:</strong> 6:00 - 23:00</p>
-                            <p><small>*Cerramos tardes de jueves y domingos</small></p>
+                            <p><strong>Martes, Miércoles y Viernes:</strong> 6:00 – 24:00</p>
+                            <p><strong>Jueves:</strong> 6:00 – 17:00</p>
+                            <p><strong>Sábado:</strong> 7:00 – 24:00</p>
+                            <p><strong>Domingo:</strong> 7:00 – 23:00</p>
                         </div>
                     </div>
                 </div>
@@ -133,10 +136,10 @@ const restaurantData = {
                 <section class="triptico-section fade-in">
                     <div class="container">
                         <h1 class="triptico-title">Nuestra Carta</h1>
-                        <p class="triptico-subtitle">Portada e interior</p>
+                        <p class="triptico-subtitle">Descubre nuestra carta con tapas, raciones, mariscos, arroces y platos de cocina española con un toque gallego en Madrid.</p>
                         <div class="triptico-images">
-                            <img src="img/carta-exterior.jpg" alt="Portada" class="triptico-img" loading="lazy">
-                            <img src="img/carta-interior.jpg" alt="Interior" class="triptico-img" loading="lazy">
+                            <img src="img/carta-exterior.jpg" alt="Carta exterior de Un Toque Gallego" class="triptico-img" loading="lazy">
+                            <img src="img/carta-interior.jpg" alt="Carta interior de Un Toque Gallego" class="triptico-img" loading="lazy">
                         </div>
                         <div class="triptico-actions">
                             <button class="btn-ver-pdf ver-carta-completa-btn">
@@ -309,7 +312,7 @@ const restaurantData = {
                     description: "Postres caseros y dulces tradicionales gallegos",
                     dishes: [
                         { name: "Filloa rellena de crema", description: "Fina filloa gallega rellena de suave crema pastelera, flameada o con chocolate", allergens: ["Huevos", "Gluten", "Lácteos"], price: "5,50€", image: img('img/filloa.webp', 'Filloa rellena de crema') },
-                        { name: "Coulan de chocolate", description: "Bizcocho de chocolate con corazón fundente, servido con helado de vainilla", allergens: ["Gluten", "Huevos", "Lácteos"], price: "5,50€", image: img('img/coulan.webp', 'Coulan de chocolate') },
+                        { name: "Coulant de chocolate", description: "Bizcocho de chocolate con corazón fundente, servido con helado de vainilla", allergens: ["Gluten", "Huevos", "Lácteos"], price: "5,50€", image: img('img/coulan.webp', 'Coulant de chocolate') },
                         { name: "Tarta de queso casera", description: "Tarta de queso cremosa al estilo casero, con base crujiente", allergens: ["Gluten", "Huevos", "Lácteos"], price: "5,00€", image: img('img/tarta-queso.webp', 'Tarta de queso casera') },
                         { name: "Helados (vainilla o chocolate)", description: "Bolas de helado de vainilla o chocolate, cremosas y frías", allergens: ["Lácteos"], price: "4,50€", image: img('img/helados.webp', 'Helados de vainilla o chocolate') },
                         { name: "Sorbete Limón", description: "Sorbete refrescante de limón natural, ligero y aromático", allergens: [], price: "4,50€", image: img('img/sorbete-limon.webp', 'Sorbete de limón') }
@@ -325,7 +328,7 @@ const restaurantData = {
                 <!-- Menús Diarios -->
                 <section id="menus" class="menu-section">
                     <h2>Menús del Día</h2>
-                    <p class="menu-intro">Disfruta de nuestros menús del día, elaborados con ingredientes frescos y de calidad que reflejan lo mejor de la gastronomía gallega y española. Saborea platos como Judías Blancas con Oreja, Espaguetis Salteados con Verduras, Calamares Andaluza, Pollo Asado, Lentejas de la Abuela, Pescado del Día y mucho más. Con opciones para todos los gustos, desde carnes a la plancha hasta sabrosas ensaladas, cada comida es una experiencia única y casera. ¡Ven a disfrutar de lo mejor en cada bocado!</p>
+                    <p class="menu-intro">Disfruta de nuestro menú del día en la Elipa, elaborado con ingredientes frescos y recetas caseras. Cada día ofrecemos diferentes platos de cocina española pensados para comer bien y rápido en el barrio.</p>
                     <div class="menu-footer">
                         <p class="menu-price-final">Precio: <span class="price-circle">13,00€</span></p>
                         <p class="menu-includes">Incluye: Pan, Bebida, Postre o Café</p>

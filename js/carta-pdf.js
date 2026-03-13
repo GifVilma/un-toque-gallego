@@ -9,7 +9,7 @@
         <div class="carta-pdf-container fade-in">
             <header class="carta-pdf-header">
                 <h1>Cervecería — Un Toque Gallego</h1>
-                <p class="subtitle">Auténtica gastronomía gallega en Madrid</p>
+                <p class="subtitle">Cocina española con un toque gallego en Ciudad Lineal barrio La Elipa, Madrid</p>
                 <p class="phones">916 34 38 88 · 656 94 54 89</p>
             </header>
 
@@ -145,7 +145,7 @@
                 <h2>Postres</h2>
                 ${generateLines([
                     "Filloa Rellena de Crema", "5,50€",
-                    "Coulan de Chocolate", "5,50€",
+                    "Coulant de Chocolate", "5,50€",
                     "Tarta de Queso Casera", "5,00€",
                     "Helados (Vainilla/Chocolate)", "4,50€",
                     "Sorbete de Limón", "4,50€"
