@@ -155,7 +155,23 @@ class RestaurantApp {
             this.renderDesktop(data, subsection);
         }
 
-        this.contentContainer.scrollIntoView({ behavior: 'smooth' });
+        const headerHeight = document.querySelector('.header')?.offsetHeight || 60;
+        const breadcrumbHeight = document.querySelector('.breadcrumbs')?.offsetHeight || 40;
+        const subcategoryHeight = document.querySelector('.mobile-subcategory-bar.active')?.offsetHeight || 0;
+
+        const extraMargin = 20;
+        const offset = headerHeight + breadcrumbHeight + subcategoryHeight + extraMargin;
+
+        const targetPosition =
+            this.contentContainer.getBoundingClientRect().top +
+            window.pageYOffset -
+            offset;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+
     }
 
     renderDesktop(data, activeKey) {

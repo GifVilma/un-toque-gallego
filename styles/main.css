@@ -10,8 +10,8 @@
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --header-height: 60px;
-    --breadcrumb-height: 40px;
-    --subcategory-height: 48px; /* Reducido de 60px a 48px */
+    --breadcrumb-height: 36px;
+    --subcategory-height: 50px; /* Reducido de 60px a 48px */
 }
 
 /* Reset y estilos base */
@@ -208,6 +208,7 @@ body.has-subcategory {
     z-index: 997;
     height: var(--breadcrumb-height);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
 }
 
 .breadcrumb-nav {
@@ -247,6 +248,7 @@ body.has-subcategory {
     z-index: 996;
     height: var(--subcategory-height);
     display: none;
+    align-items: center;
 }
 
 .mobile-subcategory-bar.active {
