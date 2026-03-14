@@ -10,8 +10,8 @@
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --header-height: 60px;
-    --breadcrumb-height: 40px;
-    --subcategory-height: 40px; /* Reducido de 60px a 48px */
+    --breadcrumb-height: 36px;
+    --subcategory-height: 40px; 
 }
 
 /* Reset y estilos base */
@@ -241,50 +241,103 @@ body.has-subcategory {
     color: #9ca3af;
 }
 
-/* Barra de subcategorías móvil */
+/* ────────────────────────────────────────────────
+   BARRA DE SUBCATEGORÍAS MÓVIL – versión corregida
+   ──────────────────────────────────────────────── */
 .mobile-subcategory-bar {
     position: fixed;
     top: calc(var(--header-height) + var(--breadcrumb-height));
     left: 0;
     right: 0;
-    background: white;
-    border-bottom: 1px solid var(--border-color);
     z-index: 996;
-    height: var(--subcategory-height);
-    display: none;
-    align-items: center;
+    
+    /* Por defecto: colapsado, sin ocupar espacio */
+    height: 0;
+    overflow: hidden;
+    background: white;
+    border-bottom: none;
+    box-shadow: none;
+    
+    transition: 
+        height 0.22s ease-out,
+        border-bottom 0.22s ease-out,
+        box-shadow 0.22s ease-out;
 }
 
 .mobile-subcategory-bar.active {
+    height: var(--subcategory-height);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Refuerzo de seguridad */
+.mobile-subcategory-bar:not(.active) {
+    height: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+
+.mobile-subcategory-bar .container {
+    height: 100%;
     display: flex;
+    align-items: center;
 }
 
 .subcategory-buttons {
     display: flex;
     align-items: center;
-    height: 100;
+    height: 100%;
+    width: 100%;
+    padding: 0 14px;
     gap: 10px;
     overflow-x: auto;
-    padding: 4px 10px;
-    scrollbar-gutter: stable;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(2, 31, 60, 0.4) transparent;
+}
+
+.subcategory-buttons::-webkit-scrollbar {
+    height: 5px;
+}
+
+.subcategory-buttons::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 0 6px;
+}
+
+.subcategory-buttons::-webkit-scrollbar-thumb {
+    background: rgba(2, 31, 60, 0.45);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.subcategory-buttons::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
 }
 
 .subcategory-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 12px;
+    flex: 0 0 auto;
+    padding: 8px 17px;
+    border-radius: 999px;
+    background: #fefce8;
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 600;
     white-space: nowrap;
-    transition: all 0.3s ease;
+    border: 1px solid #fde047;
+    cursor: pointer;
+    transition: all 0.18s ease;
 }
 
-.subcategory-btn:hover,
-.subcategory-btn.active {
+.subcategory-btn.active,
+.subcategory-btn:hover {
     background: var(--desa-carta);
-    color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 6px rgba(212, 160, 23, 0.25);
 }
 
 /* Hero Section (para secciones distintas a inicio, como Desayunos y Carta) */
@@ -334,7 +387,6 @@ body.has-subcategory {
     font-weight: 600;
     margin-bottom: 10px;
 }
-
 
 .hero-section h1,
 .hero-section-inicio h1 {
@@ -868,7 +920,7 @@ body.has-subcategory {
     }
     
     .hero-content {
-        max-width: 75%; /* Comportamiento original para otras secciones */
+        max-width: 75%;
         margin: 0 auto;
         align-items: center;
         text-align: center;
@@ -908,61 +960,10 @@ body.has-subcategory {
         max-width: 250px;
     }
 
-    
-    /* Barra de subcategorías móvil */
-    .mobile-subcategory-bar {
-        height: var(--subcategory-height);
-    }
-
-
-    .subcategory-buttons {
-        gap: 12px;
-        padding: 0 10px;
-    }
-
+    /* Botones subcategoría móvil */
     .subcategory-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        padding: 8px 16px;
-        border-radius: 12px;
-        background: var(--primary-color);
-        color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        min-width: unset;
-        white-space: nowrap;
-        line-height: 1.2;
-    }
-
-    .subcategory-btn:hover,
-    .subcategory-btn.active {
-        background: var(--desa-carta);
-        border-color: var(--primary-color);
-        box-shadow: var(--shadow);
-        transform: translateY(-2px);
-        color: var(--primary-color);
-    }
-
-    /* Restaurar estilos de subcategory-card para móviles */
-    .subcategory-card {
-        background: white;
-        color: var(--text-color);
-    }
-
-    .subcategory-card:hover,
-    .subcategory-card.active {
-        background: white;
-        color: var(--text-color);
-    }
-
-    .subcategory-card h4 {
-        color: var(--primary-color);
-    }
-
-    .subcategory-card p {
-        color: #6b7280;
+        font-size: 12.5px;
+        padding: 7px 16px;
     }
 }
 
@@ -1059,7 +1060,7 @@ body.has-subcategory {
     }
 
     .hero-content {
-        max-width: 75%; /* Comportamiento original para otras secciones */
+        max-width: 75%;
         margin: 0 auto;
         align-items: center;
         text-align: center;
@@ -1151,8 +1152,6 @@ body.has-subcategory {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-/* fin */
-
 
 /* ========================================
    MENÚS 
@@ -1237,11 +1236,10 @@ body.has-subcategory {
 }
 
 /* ========================================
-   MENÚS ESPECIALES – 
-   2 columnas desktop, 1 móvil, tarjetas elevadas
+   MENÚS ESPECIALES 
    ======================================== */
 
-   #special-menus {
+#special-menus {
     padding: 40px 20px;
     background: var(--background-color);
 }
@@ -1279,7 +1277,7 @@ body.has-subcategory {
     box-shadow: var(--shadow-lg);
 }
 
-/* Header (AZUL, no rojo) */
+/* Header (AZUL) */
 #special-menus .card-header {
     background: var(--primary-color);
     color: white;
@@ -1314,8 +1312,21 @@ body.has-subcategory {
     font-size: 1.25rem;
     color: var(--primary-color);
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: 600;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#special-menus .col-md-6 h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: #03acf4;
+    border-radius: 2px;
 }
 
 /* Cada plato */
@@ -1447,36 +1458,13 @@ body.has-subcategory {
         height: 100px;
     }
 }
-/* LÍNEA DORADA COMPLETA DEBAJO DE "PRIMEROS" Y "SEGUNDOS" */
-#special-menus .col-md-6 h5 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 12px;
-}
-
-#special-menus .col-md-6 h5::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    background: #03acf4; /* Azul */
-    border-radius: 2px;
-}
-
 
 /* ============================================================= */
 /* 1. FIX: La carta digital se veía cortada en móvil           */
 /* ============================================================= */
 @media (max-width: 900px) {
     .carta-digital-columns {
-        grid-template-columns: 1fr !important;   /* 1 columna en pantallas pequeñas */
+        grid-template-columns: 1fr !important;
         gap: 32px 20px;
     }
     
@@ -1501,7 +1489,7 @@ body.has-subcategory {
 /* ============================================================= */
 .carta-digital-page {
     margin: 30px 0;
-    padding: 32px 28px 40px !important;   /* más aire */
+    padding: 32px 28px 40px !important;
 }
 
 .carta-digital-watermark {
@@ -1509,8 +1497,7 @@ body.has-subcategory {
     opacity: 0.04;
 }
 
-
-/* ====================== TRÍPTICO - LIMPIO Y ELEGANTE ====================== */
+/* ====================== TRÍPTICO ====================== */
 .triptico-section {
     padding: 50px 20px;
     background: linear-gradient(180deg, #021f3c 0%, rgba(4, 138, 198, 0.7) 100%);
@@ -1581,7 +1568,8 @@ body.has-subcategory {
     .triptico-img { border-radius: 14px; }
     .triptico-section { padding: 80px 15px; }
 }
-/* ====================== ZOOM PERFECTO EN MÓVILES ====================== */
+
+/* ====================== ZOOM EN MÓVILES ====================== */
 .triptico-zoom-container {
     display: flex;
     flex-direction: column;
@@ -1597,17 +1585,15 @@ body.has-subcategory {
     box-shadow: 0 25px 60px rgba(0,0,0,0.6);
     border: 4px solid rgba(255,255,255,0.15);
     transition: transform 0.3s ease;
-    image-rendering: -webkit-optimize-contrast; /* Mejor calidad al hacer zoom */
+    image-rendering: -webkit-optimize-contrast;
 }
 
-/* ZOOM AL TOCAR (móvil) o al hacer hover (escritorio) */
 .triptico-zoom-img:active,
 .triptico-zoom-img:hover {
     transform: scale(1.02);
     box-shadow: 0 35px 80px rgba(0,0,0,0.7);
 }
 
-/* EN MÓVIL: permite hacer zoom con los dedos */
 @media (max-width: 768px) {
     .triptico-zoom-img {
         max-width: 100vw;
@@ -1617,14 +1603,10 @@ body.has-subcategory {
         border-right: none;
     }
     
-    /* Permite zoom del navegador */
     meta[name="viewport"] {
         content: "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes";
     }
 }
-
-
-
 
 /* ====================== NOSOTROS ====================== */
 .nosotros-section {
@@ -1688,7 +1670,7 @@ body.has-subcategory {
 
 .localizacion-titulo {
     font-family: 'Playfair Display', serif;
-    font-size: 2,4rem;
+    font-size: 2.4rem;
     color: #021f3c;
     text-align: center;
     margin-bottom: 50px;
