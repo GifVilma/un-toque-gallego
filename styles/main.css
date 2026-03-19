@@ -1777,3 +1777,38 @@ body.has-subcategory {
         line-height: 1.7;
     }
 }
+
+.seo-links {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.seo-links-text {
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+}
+
+.seo-links a {
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.seo-links a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .seo-links {
+        margin-top: 14px;
+        padding: 0 10px;
+    }
+
+    .seo-links-text {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+}

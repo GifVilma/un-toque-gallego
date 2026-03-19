@@ -167,7 +167,7 @@ const restaurantData = {
                         { name: "Café o Infusión con Tostadas", description: "Pan tostado, Cruasán plancha, o Barrita con tomate natural, aceite de oliva y sal", allergens: ["Gluten", "Lácteos", "Huevos"], price: "2,80€", image: img('img/con-tostadas.webp', 'Café con tostadas') },
                         { name: "Colacao con Bollería", description: "Cruasán, Napolitana, Bizcocho o Magdalena", allergens: ["Gluten", "Lácteos", "Huevos"], price: "3,00€", image: img('img/colacao-bolleria.webp', 'Colacao con bollería') },
                         { name: "Colacao con Tostadas", description: "Pan tostado, Cruasán plancha, o Barrita con tomate natural, aceite de oliva y sal", allergens: ["Gluten", "Lácteos", "Huevos"], price: "3,20€", image: img('img/colacao-zumo.webp', 'Colacao con tostadas') },
-                        { name: "Zumo de Naranja", description: "Zumo natural", price: "2,80€", image: img('img/zumo-naranja.webp', 'Zumo de naranja natural') }
+                        { name: "Zumo de Naranja", description: "Zumo natural", price: "2,80€", image: img('img/zumo-naranja.jpg', 'Zumo de naranja natural') }
                     ]
                 },
                 "revueltos": {
@@ -210,7 +210,7 @@ const restaurantData = {
                         { name: "De Calamares", description: "Anillas de calamar rebozadas y fritas, en pan crujiente al estilo madrileño", allergens: ["Moluscos", "Huevos", "Gluten"], price: "5,20€/4,50€", image: img('img/bocadillo-calamares.webp', 'Bocadillo de calamares') },
                         { name: "De Tortilla de Patata", description: "Clásica tortilla española dentro de pan crujiente, jugosa y sabrosa", allergens: ["Gluten", "Huevos"], price: "5,00€/4,00€", image: img('img/bocadillo-tortilla.webp', 'Bocadillo de tortilla de patata') },
                         { name: "De Tortilla Francesa", description: "Tortilla francesa esponjosa servida en pan tostado", allergens: ["Gluten", "Huevos"], price: "5,00€/4,00€", image: img('img/bocadillo-tortilla-f.webp', 'Bocadillo de tortilla francesa') },
-                        { name: "Pepito de Ternera", description: "Tierno filete de ternera a la plancha en pan crujiente, con un toque de aceite y sal", allergens: ["Gluten"], price: "6,00€", image: img('img/petito-ternera.webp', 'Petito de ternera') }
+                        { name: "Pepito de Ternera", description: "Tierno filete de ternera a la plancha en pan crujiente, con un toque de aceite y sal", allergens: ["Gluten"], price: "6,00€", image: img('img/pepito-ternera.webp', 'Pepito de ternera') }
                     ]
                 }
             }
