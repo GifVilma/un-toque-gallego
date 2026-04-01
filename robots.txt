@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-sitemap: https://untoquegallego.com/
+sitemap: https://untoquegallego.com/sitemap.xml
