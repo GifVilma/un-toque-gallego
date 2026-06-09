@@ -10,7 +10,7 @@ const restaurantData = {
                 <section class="hero-section-inicio">
                     <div class="hero-content">
                         <h1>Un Toque Gallego</h1>
-                        <h2>Restaurante de cocina española con toque gallego en Ciudad Lineal, Madrid</h2>
+                        <h2>Restaurante de comida española con toque gallego en Ciudad Lineal, Madrid</h2>
                         <p class="hero-subtitle">Desayunos desde primera hora, tapas, raciones, mariscos, arroces y menú del día en la zona de La Elipa. Un lugar cercano para desayunar, comer o cenar en Madrid.</p>
                         <div class="hero-buttons">
                             <a href="#reservas" class="hero-button" data-section="reservas">Reserva / Para Llevar</a>
